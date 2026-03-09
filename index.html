@@ -8,14 +8,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_new.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
       <a href="#top" class="brand" aria-label="PICNICS home">
-        <span class="brand-mark">P</span>
-        <span class="brand-text">PICNICS</span>
+        <img src="logo.png" alt="PICNICS" class="brand-logo">
       </a>
 
       <nav class="site-nav" aria-label="Main navigation">
@@ -49,39 +48,44 @@
           <ul class="project-meta" aria-label="Project metadata">
             <li><strong>Funding:</strong> ANR</li>
             <li><strong>Instrument:</strong> PRC</li>
-            <li><strong>Grant:</strong> ANR-25-CE48-5369</li>
+            <li><strong>Duration:</strong> 2026–2029</li>
+            <li><strong>Status:</strong> Project website under construction</li>
           </ul>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
-          <div class="hero-card hero-card-1"></div>
-          <div class="hero-card hero-card-2"></div>
-          <div class="hero-card hero-card-3">
-            <div class="point-cloud">
-              <span></span><span></span><span></span><span></span><span></span>
-              <span></span><span></span><span></span><span></span><span></span>
-              <span></span><span></span><span></span><span></span>
-            </div>
+        <div class="hero-visual">
+          <img src="logo.png" alt="PICNICS logo" class="hero-logo">
+          <div class="hero-floating-card hero-floating-card-top">
+            <span class="card-label">Human perception</span>
+            <p>Visual quality, immersive media, perceptual optimization</p>
+          </div>
+          <div class="hero-floating-card hero-floating-card-bottom">
+            <span class="card-label">Machine vision</span>
+            <p>Task-aware coding, semantic analysis, AI-ready representations</p>
           </div>
         </div>
       </div>
     </section>
 
     <section id="about" class="section section-light">
-      <div class="container narrow">
-        <p class="section-kicker">About</p>
-        <h2>Research at the intersection of compression, perception, and machine vision</h2>
-        <p>
-          Point clouds are becoming a key representation for immersive media, three-dimensional scene understanding,
-          robotics, and extended reality. Their efficient coding requires more than minimizing bitrate and signal distortion:
-          future methods must also preserve the information needed by downstream machine analysis while maintaining high
-          perceptual quality for human users.
-        </p>
-        <p>
-          PICNICS investigates coding frameworks, representations, and evaluation methodologies that bridge human-centric
-          and task-oriented objectives. The project combines expertise in multimedia coding, visual quality assessment,
-          machine vision, and learning-based methods.
-        </p>
+      <div class="container about-grid">
+        <div>
+          <p class="section-kicker">About</p>
+          <h2>Research at the intersection of compression, perception, and machine vision</h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            Point clouds are becoming a key representation for immersive media, three-dimensional scene understanding,
+            robotics, and extended reality. Their efficient coding requires more than minimizing bitrate and signal distortion:
+            future methods must also preserve the information needed by downstream machine analysis while maintaining high
+            perceptual quality for human users.
+          </p>
+          <p>
+            PICNICS investigates coding frameworks, representations, and evaluation methodologies that bridge human-centric
+            and task-oriented objectives. The project combines expertise in multimedia coding, visual quality assessment,
+            machine vision, and learning-based methods.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -99,7 +103,7 @@
         </div>
 
         <div class="partner-grid">
-          <article class="partner-card">
+          <article class="partner-card featured-partner">
             <div class="partner-top">
               <div class="partner-badge">L2S</div>
               <div>
@@ -145,7 +149,7 @@
                 <div class="avatar-placeholder muted">+</div>
                 <div>
                   <span class="placeholder-name">Photo placeholder</span>
-                  <p>You can replace this later with a team photo or additional member.</p>
+                  <p>Add a portrait or team image later.</p>
                 </div>
               </div>
             </div>
@@ -171,7 +175,7 @@
                 <div class="avatar-placeholder muted">+</div>
                 <div>
                   <span class="placeholder-name">Photo placeholder</span>
-                  <p>Add portraits later by replacing placeholder circles with images.</p>
+                  <p>Add a portrait or team image later.</p>
                 </div>
               </div>
             </div>
@@ -204,12 +208,14 @@
     </section>
 
     <section id="resources" class="section">
-      <div class="container narrow">
-        <p class="section-kicker">Code &amp; Resources</p>
-        <h2>Software, benchmarks, and datasets</h2>
-        <p>
-          Code, datasets, and evaluation resources can be shared through your project repository as they become available.
-        </p>
+      <div class="container resources-grid">
+        <div>
+          <p class="section-kicker">Code &amp; Resources</p>
+          <h2>Software, benchmarks, and datasets</h2>
+          <p>
+            Code, datasets, and evaluation resources can be shared through your project repository as they become available.
+          </p>
+        </div>
         <div class="resource-box">
           <a class="button button-primary" href="https://gitlab.com/" target="_blank" rel="noopener noreferrer">Project repository</a>
           <p class="resource-note">Replace this link with the actual GitLab or GitHub repository when ready.</p>
@@ -237,10 +243,13 @@
 
   <footer class="site-footer">
     <div class="container footer-wrap">
-      <div>
-        <p class="footer-title">PICNICS</p>
-        <p class="footer-text">Funded by the French National Research Agency (ANR)</p>
-        <p class="footer-text">Grant ANR-25-CE48-5369</p>
+      <div class="footer-branding">
+        <div>
+          <p class="footer-title">PICNICS</p>
+          <p class="footer-text">Funded by the French National Research Agency (ANR)</p>
+          <p class="footer-text">Grant reference to be updated if needed</p>
+        </div>
+        <img src="ANR-logo-2021-complet.jpg" alt="ANR logo" class="anr-logo">
       </div>
       <p class="footer-copy">© 2026 PICNICS Project — Université Paris-Saclay / CNRS</p>
     </div>
