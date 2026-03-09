@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: picnics-anr/picnics-anr
+  repo: picnics-anr
   branch: main
 
 media_folder: "images"
