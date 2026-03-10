@@ -1,0 +1,35 @@
+media:
+  input: images
+  output: images
+
+content:
+  - name: news
+    label: News
+    path: content/news
+    type: collection
+    filename: "{year}-{month}-{day}-{slug}.md"
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: date
+        label: Date
+        type: date
+      - name: body
+        label: Body
+        type: text
+
+  - name: people
+    label: People
+    path: content/people
+    type: collection
+    fields:
+      - name: name
+        label: Name
+        type: string
+      - name: role
+        label: Role
+        type: string
+      - name: body
+        label: Bio
+        type: text
