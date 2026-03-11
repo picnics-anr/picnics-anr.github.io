@@ -5,146 +5,316 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PICNICS — PoInt Cloud compressioN for human perceptIon and maChine viSion. ANR collaborative research project on point cloud compression for human perception and machine vision.">
   <title>PICNICS Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#top" class="brand" aria-label="PICNICS home">
+        <img src="logo.png" alt="PICNICS" class="brand-logo">
+      </a>
 
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a href="#top" class="brand">
-      <img src="logo.png" class="brand-logo">
-    </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#partners">Partners</a>
+        <a href="#news">News</a>
+        <a href="#positions">Open Positions</a>
+        <a href="#publications">Publications</a>
+        <a href="#resources">Resources</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <nav class="site-nav">
-      <a href="#about">About</a>
-      <a href="#partners">Partners</a>
-      <a href="#news">News</a>
-      <a href="#positions">Open positions</a>
-      <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">ANR Collaborative Research Project</p>
+          <h1>PICNICS</h1>
+          <p class="hero-subtitle">PoInt Cloud compressioN for human perceptIon and maChine viSion</p>
+          <p class="hero-text">
+            PICNICS explores next-generation point cloud compression methods that jointly consider
+            human perceptual quality and machine vision performance, with the goal of enabling
+            immersive communication, efficient storage, and AI-ready visual representations.
+          </p>
 
+          <div class="hero-actions">
+            <a class="button button-primary" href="#partners">Meet the partners</a>
+            <a class="button button-secondary" href="#publications">View publications</a>
+          </div>
 
-<main id="top">
+          <ul class="project-meta" aria-label="Project metadata">
+            <li><strong>Funding:</strong> ANR</li>
+            <li><strong>Instrument:</strong> PRC</li>
+            <li><strong>Duration:</strong> 2026–2029</li>
+            <li><strong>Status:</strong> Project website under construction</li>
+          </ul>
+        </div>
 
-
-<section class="hero">
-  <div class="container">
-    <h1>PICNICS</h1>
-    <p>PoInt Cloud compressioN for human perceptIon and maChine viSion</p>
-  </div>
-</section>
-
-
-
-<section id="about" class="section">
-  <div class="container">
-    <h2>About</h2>
-    <p>
-      PICNICS explores next-generation point cloud compression methods for
-      human perception and machine vision.
-    </p>
-  </div>
-</section>
-
-
-
-<section id="partners" class="section section-light">
-  <div class="container">
-    <h2>Partners</h2>
-
-    <p>L2S — CNRS / CentraleSupélec / Université Paris-Saclay</p>
-    <p>XLIM — Université de Poitiers</p>
-    <p>LIP6 — Sorbonne Université</p>
-
-  </div>
-</section>
-
-
-
-<!-- ================= NEWS ================= -->
-
-<section id="news" class="section">
-  <div class="container">
-
-    <h2>News</h2>
-
-    {% for post in site.news reversed %}
-
-      <div class="publication-item">
-        <span class="pub-year">
-          {{ post.date | date: "%Y" }}
-        </span>
-
-        <div>
-          <h3>{{ post.title }}</h3>
-          <p>{{ post.body }}</p>
+        <div class="hero-visual">
+          <img src="logo.png" alt="PICNICS logo" class="hero-logo">
+          <div class="hero-floating-card hero-floating-card-top">
+            <span class="card-label">Human perception</span>
+            <p>Visual quality, immersive media, perceptual optimization</p>
+          </div>
+          <div class="hero-floating-card hero-floating-card-bottom">
+            <span class="card-label">Machine vision</span>
+            <p>Task-aware coding, semantic analysis, AI-ready representations</p>
+          </div>
         </div>
       </div>
+    </section>
 
-    {% endfor %}
-
-  </div>
-</section>
-
-
-
-<!-- ================= POSITIONS ================= -->
-
-<section id="positions" class="section section-light">
-  <div class="container">
-
-    <h2>Open positions</h2>
-
-    {% for post in site.positions reversed %}
-
-      <div class="publication-item">
-        <span class="pub-year">
-          {{ post.date | date: "%Y" }}
-        </span>
-
+    <section id="about" class="section section-light">
+      <div class="container about-grid">
         <div>
-          <h3>{{ post.title }}</h3>
-          <p>{{ post.body }}</p>
+          <p class="section-kicker">About</p>
+          <h2>Research at the intersection of compression, perception, and machine vision</h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            Point clouds are becoming a key representation for immersive media, three-dimensional scene understanding,
+            robotics, and extended reality. Their efficient coding requires more than minimizing bitrate and signal distortion:
+            future methods must also preserve the information needed by downstream machine analysis while maintaining high
+            perceptual quality for human users.
+          </p>
+          <p>
+            PICNICS investigates coding frameworks, representations, and evaluation methodologies that bridge human-centric
+            and task-oriented objectives. The project combines expertise in multimedia coding, visual quality assessment,
+            machine vision, and learning-based methods.
+          </p>
         </div>
       </div>
+    </section>
 
-    {% endfor %}
+    <section id="partners" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Partners</p>
+            <h2>Consortium</h2>
+          </div>
+          <p class="section-intro">
+            PICNICS brings together three complementary academic partners across multimedia signal processing,
+            quality assessment, and machine vision.
+          </p>
+        </div>
 
-  </div>
-</section>
+        <div class="partner-grid">
+          <article class="partner-card featured-partner">
+            <div class="partner-top">
+              <div class="partner-badge">L2S</div>
+              <div>
+                <h3>L2S</h3>
+                <p class="partner-affiliation">Laboratoire des Signaux et Systèmes<br>CNRS, CentraleSupélec, Université Paris-Saclay</p>
+              </div>
+            </div>
+            <div class="member-list">
+              <div class="member">
+                <div class="avatar-placeholder">GV</div>
+                <div>
+                  <a href="https://l2s.centralesupelec.fr/u/valenzise-giuseppe/" target="_blank" rel="noopener noreferrer">Giuseppe Valenzise</a>
+                  <p>Project coordinator</p>
+                </div>
+              </div>
+              <div class="member">
+                <div class="avatar-placeholder">FD</div>
+                <div>
+                  <a href="https://l2s.centralesupelec.fr/u/dufaux-frederic/" target="_blank" rel="noopener noreferrer">Frédéric Dufaux</a>
+                  <p>Partner investigator</p>
+                </div>
+              </div>
+            </div>
+          </article>
 
+          <article class="partner-card">
+            <div class="partner-top">
+              <div class="partner-badge">XLIM</div>
+              <div>
+                <h3>XLIM</h3>
+                <p class="partner-affiliation">Université de Poitiers</p>
+              </div>
+            </div>
+            <div class="member-list">
+              <div class="member">
+                <div class="avatar-placeholder">CL</div>
+                <div>
+                  <a href="https://www.xlim.fr/en/members/chaker-larabi" target="_blank" rel="noopener noreferrer">Chaker Larabi</a>
+                  <p>Partner investigator</p>
+                </div>
+              </div>
+              <div class="member member-placeholder">
+                <div class="avatar-placeholder muted">+</div>
+                <div>
+                  <span class="placeholder-name">Photo placeholder</span>
+                  <p>Add a portrait or team image later.</p>
+                </div>
+              </div>
+            </div>
+          </article>
 
+          <article class="partner-card">
+            <div class="partner-top">
+              <div class="partner-badge">LIP6</div>
+              <div>
+                <h3>LIP6</h3>
+                <p class="partner-affiliation">Sorbonne Université</p>
+              </div>
+            </div>
+            <div class="member-list">
+              <div class="member">
+                <div class="avatar-placeholder">HS</div>
+                <div>
+                  <a href="https://www.lip6.fr/annuaire/fiche.php?ident=O121" target="_blank" rel="noopener noreferrer">Hichem Sahbi</a>
+                  <p>Partner investigator</p>
+                </div>
+              </div>
+              <div class="member member-placeholder">
+                <div class="avatar-placeholder muted">+</div>
+                <div>
+                  <span class="placeholder-name">Photo placeholder</span>
+                  <p>Add a portrait or team image later.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section id="publications" class="section">
-  <div class="container">
-    <h2>Publications</h2>
-    <p>To be added</p>
-  </div>
-</section>
+    <section id="news" class="section section-light">
+      <div class="container narrow">
+        <p class="section-kicker">News</p>
+        <h2>Latest updates</h2>
+        <div class="publication-list">
+          {% assign news_items = site.news | sort: "date" | reverse %}
+          {% if news_items.size > 0 %}
+            {% for post in news_items limit: 6 %}
+              <article class="publication-item">
+                <span class="pub-year">{{ post.date | date: "%Y" }}</span>
+                <div>
+                  <h3>{{ post.title }}</h3>
+                  <p>{{ post.body | markdownify | strip_html }}</p>
+                </div>
+              </article>
+            {% endfor %}
+          {% else %}
+            <article class="publication-item publication-placeholder">
+              <span class="pub-year">2026</span>
+              <div>
+                <h3>Project news will appear here</h3>
+                <p>Use Pages CMS to add the first news item.</p>
+              </div>
+            </article>
+          {% endif %}
+        </div>
+      </div>
+    </section>
 
+    <section id="positions" class="section">
+      <div class="container narrow">
+        <p class="section-kicker">Open Positions</p>
+        <h2>Join the project</h2>
+        <div class="publication-list">
+          {% assign pos_items = site.positions | sort: "date" | reverse %}
+          {% if pos_items.size > 0 %}
+            {% for post in pos_items %}
+              <article class="publication-item">
+                <span class="pub-year">{{ post.date | date: "%Y" }}</span>
+                <div>
+                  <h3>{{ post.title }}</h3>
+                  <p>{{ post.body | markdownify | strip_html }}</p>
+                </div>
+              </article>
+            {% endfor %}
+          {% else %}
+            <article class="publication-item publication-placeholder">
+              <span class="pub-year">2026</span>
+              <div>
+                <h3>No open positions at the moment</h3>
+                <p>Future PhD, postdoc, internship, or engineer openings can be posted here through Pages CMS.</p>
+              </div>
+            </article>
+          {% endif %}
+        </div>
+      </div>
+    </section>
 
+    <section id="publications" class="section section-light">
+      <div class="container narrow">
+        <p class="section-kicker">Publications</p>
+        <h2>Selected outputs</h2>
+        <div class="publication-list">
+          <article class="publication-item publication-placeholder">
+            <span class="pub-year">2026</span>
+            <div>
+              <h3>Project publications will be listed here</h3>
+              <p>Replace this placeholder with accepted journal and conference papers, preprints, datasets, or software releases.</p>
+            </div>
+          </article>
+          <article class="publication-item publication-placeholder">
+            <span class="pub-year">2025</span>
+            <div>
+              <h3>Add your first PICNICS-related references</h3>
+              <p>You can later link PDFs, code, arXiv pages, or project deliverables.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section id="contact" class="section section-accent">
-  <div class="container">
+    <section id="resources" class="section">
+      <div class="container resources-grid">
+        <div>
+          <p class="section-kicker">Code &amp; Resources</p>
+          <h2>Software, benchmarks, and datasets</h2>
+          <p>
+            Code, datasets, and evaluation resources can be shared through your project repository as they become available.
+          </p>
+        </div>
+        <div class="resource-box">
+          <a class="button button-primary" href="https://gitlab.com/" target="_blank" rel="noopener noreferrer">Project repository</a>
+          <p class="resource-note">Replace this link with the actual GitLab or GitHub repository when ready.</p>
+        </div>
+      </div>
+    </section>
 
-    <h2>Contact</h2>
+    <section id="contact" class="section section-accent">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-kicker section-kicker-light">Contact</p>
+          <h2>Get in touch</h2>
+          <p>
+            For collaborations, questions, or student opportunities related to PICNICS, feel free to contact the project coordinator.
+          </p>
+        </div>
+        <div class="contact-card">
+          <p class="contact-label">Project coordinator</p>
+          <p class="contact-name">Giuseppe Valenzise</p>
+          <p><a href="mailto:giuseppe.valenzise@universite-paris-saclay.fr">giuseppe.valenzise@universite-paris-saclay.fr</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <p>
-      Giuseppe Valenzise<br>
-      giuseppe.valenzise@universite-paris-saclay.fr
-    </p>
-
-  </div>
-</section>
-
-
-
-</main>
-
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div class="footer-branding">
+        <div>
+          <p class="footer-title">PICNICS</p>
+          <p class="footer-text">Funded by the French National Research Agency (ANR)</p>
+          <p class="footer-text">Grant reference to be updated if needed</p>
+        </div>
+        <img src="ANR-logo-2021-complet.jpg" alt="ANR logo" class="anr-logo">
+      </div>
+      <p class="footer-copy">© 2026 PICNICS Project — Université Paris-Saclay / CNRS</p>
+    </div>
+  </footer>
 </body>
 </html>
