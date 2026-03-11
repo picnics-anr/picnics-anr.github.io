@@ -1,0 +1,8 @@
+collections:
+  news:
+    output: true
+    permalink: /news/:name/
+
+  positions:
+    output: true
+    permalink: /positions/:name/
